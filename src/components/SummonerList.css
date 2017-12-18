@@ -1,0 +1,6 @@
+.summoners {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 700px;
+}

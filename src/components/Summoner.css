@@ -1,0 +1,18 @@
+.summoner {
+  max-width: 400px;
+  width: 75%;
+  display: block;
+  padding: 20px;
+  cursor: pointer;
+  margin: auto;
+}
+.detail {
+  display: block;
+}
+.username {
+  font-size: 2em;
+}
+.profileImage {
+  width: 32px;
+  height: 32px;
+}
