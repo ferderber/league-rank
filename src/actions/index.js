@@ -1,22 +1,18 @@
+import {baseUrl} from '../config';
+
 export const SET_SUMMONERS = 'SET_SUMMONERS';
 
-const summonerList = [
-  {
-    name: "Test",
-    level: 32,
-    iconId: 588
-  }, {
-    name: "Test2",
-    level: 30,
-    iconId: 588
-  }
-];
+function handleResponse(res) {
+  return res.json();
+}
+
 export const setSummoners = summoners => {
-  return {type: SET_SUMMONERS, summoners}
+  return {type: SET_SUMMONERS, summoners};
 }
 
 export function fetchSummoners() {
   return async function (dispatch) {
-    dispatch(setSummoners(summonerList))
+    const summoners = await (handleResponse(await fetch(`${baseUrl}/summoners/1`)));
+    dispatch(setSummoners(summoners));
   }
 }

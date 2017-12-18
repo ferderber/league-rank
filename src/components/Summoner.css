@@ -1,16 +1,24 @@
 .summoner {
-  max-width: 400px;
-  width: 75%;
-  display: block;
-  padding: 20px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
   margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 2px;
+}
+.summoner-main {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
 }
 .detail {
-  display: block;
-}
-.username {
-  font-size: 2em;
+  padding: 10px;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
 }
 .profileImage {
   width: 32px;

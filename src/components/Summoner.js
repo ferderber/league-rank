@@ -8,17 +8,19 @@ class Summoner extends Component {
     this.state = {
       open: false
     };
-    this.handleClick = this
-      .handleClick
-      .bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
   render() {
     return (
       <div className="summoner" onClick={this.handleClick}>
-        <img src={this.getIconUrl()} alt="Summoner icon" className="profileImage"/>
-        <span className="username">{this.props.data.name}</span>
-        <span>{this.props.data.level}</span>
-        {this.state.open ? <div className="detail">User details</div> : null}
+        <span className="summoner-main">
+          <span>{this.props.data.level}</span>
+          <img src={this.getIconUrl()} alt="Summoner icon" className="profileImage"/>
+          <span>{this.props.data.name}</span>
+        </span>
+        {this.state.open
+          ? <div className="detail">User details</div>
+          : null}
       </div>
     );
   }
@@ -28,7 +30,7 @@ class Summoner extends Component {
     });
   }
   getIconUrl() {
-    return "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/" + this.props.data.iconId + ".png";
+    return "http://ddragon.leagueoflegends.com/cdn/7.24.2/img/profileicon/" + this.props.data.profileIconId + ".png";
   }
 }
 

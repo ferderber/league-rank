@@ -5,7 +5,7 @@ import Summoner from '../components/Summoner';
 import './SummonerList.css';
 const SummonerList = ({summoners}) => (
   <div className="summoners">
-    {summoners.map((summoner) => <Summoner key={summoner.name} data={summoner}/>)}
+    {summoners && summoners.map((summoner) => <Summoner key={summoner.name} data={summoner}/>)}
   </div>
 );
 
