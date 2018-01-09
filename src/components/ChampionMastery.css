@@ -1,0 +1,61 @@
+.champion-mastery {
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  overflow: hidden;
+}
+
+.champion-head {
+  /* width: 100%; */
+  position: relative;
+  padding: 0;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.head-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 1.5em;
+  /* padding: 20px; */
+  min-width: 200px;
+  z-index: 2;
+}
+.champion-details {
+  padding: 10px;
+  background-color: #fff;
+}
+.stat-table > * > tr > th {
+  text-align: left;
+}
+.stat-table > * > tr > td {
+  text-align: center;
+}
+.head-content > * {
+  flex: 1;
+}
+.champion-avatar {
+  display: block;
+}
+
+.mastery-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.champion-image {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

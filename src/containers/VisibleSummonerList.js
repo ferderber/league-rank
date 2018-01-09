@@ -1,10 +1,20 @@
 import {connect} from 'react-redux';
-import actions from '../actions';
 import SummonerList from '../components/SummonerList';
+import {createSummoner, fetchSummoners} from '../actions/index';
 
 const mapStateToProps = state => {
-  return state;
+  return state.app;
 };
-const VisibleSummonerList = connect(mapStateToProps)(SummonerList);
+
+const mapDispatchToProps = (dispatch, props) => {
+  dispatch(fetchSummoners());
+  return {
+    onClick: (name) => {
+      dispatch(createSummoner(name));
+    }
+  }
+}
+
+const VisibleSummonerList = connect(mapStateToProps, mapDispatchToProps)(SummonerList);
 
 export default VisibleSummonerList;

@@ -1,0 +1,14 @@
+.add-summoner {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 200px;
+  flex-direction: row;
+  justify-content: safe center;
+  align-items: center;
+}
+.summoner-input {
+  height: 2em;
+  font-size: 1em;
+  margin-right: 5px;
+}

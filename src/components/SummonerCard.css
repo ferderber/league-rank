@@ -1,0 +1,33 @@
+.summoner-card {
+  width: 60%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.summoner-card > .summoner {
+  cursor: pointer;
+}
+.mastery-image {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  width: 48px;
+}
+
+.detail {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-top: 2px solid #dfdfdf;
+}

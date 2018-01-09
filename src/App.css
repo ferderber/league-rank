@@ -1,5 +1,12 @@
 .App {
 }
+nav {
+  display: flex;
+  align-items: center;
+}
+nav > * {
+  flex: 1;
+}
 
 .App-header {
   background-color: #222;

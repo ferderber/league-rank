@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import Summoner from '../components/Summoner';
+import SummonerCard from './SummonerCard';
 
 import './SummonerList.css';
-const SummonerList = ({summoners}) => (
+const SummonerList = ({summoners, onClick}) => (
   <div className="summoners">
-    {summoners && summoners.map((summoner) => <Summoner key={summoner.name} data={summoner}/>)}
+    {summoners && summoners.map((summoner) => <SummonerCard key={summoner.name} summoner={summoner} onClick={onClick}/>)}
   </div>
 );
 

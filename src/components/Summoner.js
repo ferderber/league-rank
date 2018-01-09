@@ -1,37 +1,28 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import './Summoner.css';
 
-class Summoner extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  render() {
-    return (
-      <div className="summoner" onClick={this.handleClick}>
-        <span className="summoner-main">
-          <span>{this.props.data.level}</span>
-          <img src={this.getIconUrl()} alt="Summoner icon" className="profileImage"/>
-          <span>{this.props.data.name}</span>
-        </span>
-        {this.state.open
-          ? <div className="detail">User details</div>
-          : null}
+const Summoner = ({summoner, onClick}) => (
+  <div className="summoner" onClick={onClick}>
+    <div className="summoner-content">
+      <div className="summoner-main">
+        <span className="summoner-level">{summoner.level}</span>
+        <img src={getIconUrl(summoner)} alt="Summoner icon" className="profileImage"/>
+        <span>{summoner.name}</span>
       </div>
-    );
+      <span
+        className="summoner-image"
+        style={getBackgroundStyle(summoner.championMasteries)}></span>
+    </div>
+  </div>
+);
+function getBackgroundStyle(championMasteries) {
+  if (championMasteries.length > 0) {
+    return {backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championMasteries[0].champion.key}_0.jpg')`};
   }
-  handleClick() {
-    this.setState({
-      open: !this.state.open
-    });
-  }
-  getIconUrl() {
-    return "http://ddragon.leagueoflegends.com/cdn/7.24.2/img/profileicon/" + this.props.data.profileIconId + ".png";
-  }
+}
+function getIconUrl(summoner) {
+  return "http://ddragon.leagueoflegends.com/cdn/7.24.2/img/profileicon/" + summoner.profileIconId + ".png";
 }
 
 export default Summoner;
