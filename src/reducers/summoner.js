@@ -1,10 +1,17 @@
+import {
+  SUMMONERS_SUCCESS,
+  ADD_SUMMONERS,
+  SET_ACTIVE_SUMMONER,
+  SUMMONER_SUCCESS
+} from '../actions/types';
+
 const summoners = (state = {
   summoners: []
 }, action) => {
   switch (action.type) {
-    case 'SET_SUMMONERS':
-      return Object.assign({}, state, {summoners: action.summoners});
-    case 'ADD_SUMMONERS':
+    case SUMMONERS_SUCCESS:
+      return Object.assign({}, state, {summoners: action.response});
+    case ADD_SUMMONERS:
       return Object.assign({}, state, {
         summoners: [
           ...state
@@ -13,8 +20,9 @@ const summoners = (state = {
           ...action.summoners
         ].sort((s1, s2) => s2.level - s1.level)
       });
-    case 'SET_ACTIVE_SUMMONER':
-      return Object.assign({}, state, {activeSummoner: action.summoner});
+    case SUMMONER_SUCCESS:
+    case SET_ACTIVE_SUMMONER:
+      return Object.assign({}, state, {activeSummoner: action.response});
     default:
       return state;
   }

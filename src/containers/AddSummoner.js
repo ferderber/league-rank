@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {createSummoner} from '../actions';
+import {getSummoner} from '../actions';
+import {push} from 'react-router-redux';
 import Button from '../components/Button';
 
 import './AddSummoner.css';
@@ -12,7 +13,7 @@ function validate(value) {
   return true;
 }
 
-let AddSummoner = ({dispatch}) => {
+let AddSummoner = ({dispatch, navigateToProfile}) => {
   let summonerInput;
 
   return (
@@ -21,7 +22,7 @@ let AddSummoner = ({dispatch}) => {
       onSubmit={e => {
       e.preventDefault();
       if (validate(summonerInput.value)) {
-        dispatch(createSummoner(summonerInput.value));
+        navigateToProfile(summonerInput.value);
       }
       summonerInput.value = '';
     }}>
@@ -35,6 +36,6 @@ let AddSummoner = ({dispatch}) => {
   );
 };
 
-AddSummoner = connect()(AddSummoner);
+AddSummoner = connect(null, {getSummoner, navigateToProfile: (name) => push(`/summoner/${name}`) })(AddSummoner);
 
 export default AddSummoner;

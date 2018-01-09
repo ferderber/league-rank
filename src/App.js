@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {ToastContainer} from 'react-toastify';
+import {push} from 'react-router-redux';
 import './App.css';
 import AddSummoner from './containers/AddSummoner';
 
@@ -9,7 +11,7 @@ class App extends Component {
       <div className="App">
         <nav>
           <h1>
-            <a href="/">LeagueRank</a>
+            <div onClick={this.props.navigateHome}>LeagueRank</div>
           </h1>
           <AddSummoner/>
           <div></div>
@@ -21,4 +23,6 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(null, {
+  navigateHome: () => push('/')
+})(App);

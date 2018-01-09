@@ -1,16 +1,23 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Summoner from './Summoner';
 import ChampionMastery from './ChampionMastery';
 
 import './Profile.css';
-import {createSummoner} from '../actions/index';
+import {getSummoner} from '../actions/index';
 
-const Profile = ({dispatch, match, summoners}) => {
-  const summoner = summoners.find((s) => s.name.toLowerCase() === match.params.name.toLowerCase())
-  if (summoner) {
-    return (summoner
-      ? <div className="profile">
+class Profile extends Component {
+  componentWillMount() {
+    this
+      .props
+      .getSummoner(this.props.match.params.name.toLowerCase());
+  }
+  render() {
+    const {activeSummoner} = this.props;
+    const summoner = activeSummoner;
+    if (summoner) {
+      return (
+        <div className="profile">
           <div className="profile-header">
             <Summoner summoner={summoner}/>
           </div>
@@ -25,15 +32,15 @@ const Profile = ({dispatch, match, summoners}) => {
             </div>
           </div>
         </div>
-      : null);
-  } else {
-    dispatch(createSummoner(match.params.name.toLowerCase()));
-    //add loading bar here
-    return null;
+      );
+    } else {
+      return null;
+    }
   }
-};
+}
+
 function mapStateToProps(state) {
   return state.app;
 }
 
-export default connect(mapStateToProps)(Profile);
+export default connect(mapStateToProps, {getSummoner})(Profile);
