@@ -1,8 +1,6 @@
   .summoner {
   display: flex;
-  /* position: relative; */
   flex-direction: column;
-  /* margin: auto; */
 }
 
 .summoner-content {

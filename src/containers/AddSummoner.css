@@ -12,3 +12,12 @@
   font-size: 1em;
   margin-right: 5px;
 }
+@media screen and (max-width: 750px) {
+  .add-summoner{
+    min-width: 100px;
+    width: 100px;
+  }
+  .summoner-input {
+    height: 1.3em;
+  }
+}
