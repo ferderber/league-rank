@@ -2,14 +2,19 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {getSummoner} from '../actions';
 import Button from '../components/Button';
+import {toast} from 'react-toastify';
 
 import './AddSummoner.css';
 
 function validate(value) {
-  if (!value) {
-    return false;
+  if (value) {
+    if(/^[0-9\\p{L} _\\.]+$/.test(value)) {
+      return true;
+    } else {
+      toast('Invalid summoner name!');
+    }
   }
-  return true;
+  return false;
 }
 
 let AddSummoner = ({dispatch, getSummoner}) => {

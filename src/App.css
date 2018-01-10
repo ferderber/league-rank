@@ -1,15 +1,22 @@
 .App {
-  margin-left: 20px;
-  margin-right: 20px;
+}
+.logo {
+  width: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
 }
 
 nav {
   display: flex;
+  padding-right: 10px;
+  margin-bottom: 20px;
   align-items: center;
+  background-color: #dfdfdf;
+  justify-content: space-between;
 }
-
-nav>* {
-  flex: 1;
+nav > .primary-input {
+  justify-content: flex-end;
 }
 
 .App-header {

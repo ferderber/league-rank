@@ -12,11 +12,12 @@ class App extends Component {
     return (
       <div className="App">
         <nav>
-          <h1>
-            <div onClick={this.props.navigateHome}>LeagueRank</div>
-          </h1>
-          <AddSummoner/>
-          <div></div>
+          <img
+            className="logo"
+            src="lrhalf.png"
+            width="100px"
+            onClick={this.props.navigateHome}/>
+          <AddSummoner className="primary-input"/>
         </nav>
         <ToastContainer autoClose={5000}/> {this.props.loading
           ? <div className="loading-bar">

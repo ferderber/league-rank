@@ -1,21 +1,21 @@
 .add-summoner {
   display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
   min-width: 200px;
   flex-direction: row;
   justify-content: safe center;
   align-items: center;
 }
 .summoner-input {
-  height: 2em;
+  width: 150px;
+  height: 1.5em;
   font-size: 1em;
   margin-right: 5px;
+  border: none;
+  border-radius: 2px;
 }
 @media screen and (max-width: 750px) {
   .add-summoner{
     min-width: 100px;
-    width: 100px;
   }
   .summoner-input {
     height: 1.3em;

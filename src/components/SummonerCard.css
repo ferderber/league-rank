@@ -8,11 +8,13 @@
   overflow: hidden;
   border-radius: 2px;
   position: relative;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.summoner-card > .summoner {
+
+.summoner-card>.summoner {
   cursor: pointer;
 }
+
 .mastery-image {
   position: absolute;
   z-index: 4;
@@ -30,4 +32,10 @@
   background-color: #fff;
   border: 1px solid #dfdfdf;
   border-top: 2px solid #dfdfdf;
+}
+
+@media screen and (max-width: 750px) {
+  .summoner-card {
+    width: 90%;
+  }
 }

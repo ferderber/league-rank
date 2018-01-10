@@ -6,9 +6,8 @@
   border-style: none;
   border-radius: 1px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  background-color: #2ecc71;
+  background-color: #006666;
   color: #ecf0f1;
-  
   padding: 0;
   margin: 2px;
 }
@@ -18,9 +17,7 @@
 .btn-text {
   display: block;
   position: relative;
-  /* width: 100%; */
   font-size: 1.5em;
-  padding: 12px 24px;
-  /* margin: auto; */
+  padding: 9px 16px;
   text-align: center;
 }
