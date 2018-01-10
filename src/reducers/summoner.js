@@ -4,9 +4,11 @@ import {
   SUMMONER_SUCCESS,
   SUMMONER_REQUEST,
   SUMMONER_FAILURE,
+  SUMMONERS_FAILURE,
   SUMMONERS_REQUEST,
   INCREMENT_PAGE
 } from '../actions/types';
+import { LOCATION_CHANGE } from 'react-router-redux';
 
 const summoners = (state = {
   summoners: [],
@@ -31,6 +33,10 @@ const summoners = (state = {
         errorMessage: null,
         loading: false
       });
+    case LOCATION_CHANGE:
+      return Object.assign({}, state, {pageNum: 1});
+    case SUMMONERS_FAILURE:
+      return Object.assign({}, state, {loading: false});
     case SUMMONER_FAILURE:
       return Object.assign({}, state, {loading: false, errorMessage: action.error});
     case SUMMONER_REQUEST:
