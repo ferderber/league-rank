@@ -1,6 +1,6 @@
-
 import {baseUrl} from '../config';
 import {CALL_API} from '../actions/types';
+import { toast } from 'react-toastify';
 
 const callApi = (endpoint, options) => {
     const fullUrl = (endpoint.indexOf(baseUrl) === -1)
@@ -9,9 +9,9 @@ const callApi = (endpoint, options) => {
 
     return fetch(fullUrl, options).then(response => response.json().then(json => {
         if (!response.ok) {
+            toast(json.message);
             return Promise.reject(json);
         }
-
         return json;
     }))
 }
