@@ -4,25 +4,29 @@ import {
   SUMMONER_SUCCESS,
   SUMMONER_REQUEST,
   SUMMONER_FAILURE,
-  SUMMONERS_REQUEST
+  SUMMONERS_REQUEST,
+  INCREMENT_PAGE
 } from '../actions/types';
 
 const summoners = (state = {
   summoners: [],
   loading: false,
   activeSummoner: null,
-  errorMessage: null
+  errorMessage: null,
+  pageNum: 1
 }, action) => {
   switch (action.type) {
     case SUMMONERS_SUCCESS:
       return Object.assign({}, state, {summoners: action.response, loading: false, errorMessage: null});
     case ADD_SUMMONERS:
+    console.log(state.summoners);
+    console.log(action.response);
       return Object.assign({}, state, {
         summoners: [
           ...state
             .summoners
-            .filter(s => action.summoners.every(s2 => s.summonerId !== s2.summonerId)),
-          ...action.summoners
+            .filter(s => action.response.every(s2 => s.summonerId !== s2.summonerId)),
+          ...action.response
         ].sort((s1, s2) => s2.level - s1.level),
         errorMessage: null,
         loading: false
@@ -35,6 +39,8 @@ const summoners = (state = {
       return Object.assign({}, state, {loading: true, errorMessage: null});
     case SUMMONER_SUCCESS:
       return Object.assign({}, state, {activeSummoner: action.response, loading: false, errorMessage: null});
+    case INCREMENT_PAGE:
+      return Object.assign({}, state, {pageNum: state.pageNum + 1})
     default:
       return state;
   }
