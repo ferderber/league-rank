@@ -28,8 +28,13 @@
   z-index: 2;
 }
 .champion-details {
-  padding: 10px;
+  padding: 20px;
   background-color: #fff;
+}
+.stat-description {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-bottom: 10px;
 }
 .stat-table > * > tr > th {
   text-align: left;

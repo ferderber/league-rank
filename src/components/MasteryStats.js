@@ -5,7 +5,7 @@ const MasteryStats = ({stats}) => {
   if (stats && stats.numGames > 0) 
     return (
       <div>
-      <h4>Average champion performance over {stats.numGames} recorded games</h4>
+      <div className="stat-description">Average champion performance over {stats.numGames} recorded games</div>
       <table className="stat-table">
         <thead>
           <tr>
@@ -48,7 +48,7 @@ const MasteryStats = ({stats}) => {
     );
   else 
     return (
-      <span>Summoner hasn't played any games as this champion recently.</span>
+      <span>Summoner hasn't played any games as this champion recently. Check back in an hour for detailed statistics about each Champion Mastery!</span>
     );
   }
 ;

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {push} from 'react-router-redux';
-import {getSummoners} from '../actions/index';
+import {getSummoners, getSummoner} from '../actions/index';
 import SummonerCard from '../components/SummonerCard';
 
 import './SummonerList.css';
@@ -9,15 +8,6 @@ import './SummonerList.css';
 const mapStateToProps = state => {
   return state.app;
 };
-
-const mapDispatchToProps = (dispatch, props) => {
-  return {
-    getSummoners: () => dispatch(getSummoners()),
-    onClick: (name) => {
-      dispatch(push(`/summoner/${name}`));
-    }
-  }
-}
 
 class SummonerList extends Component {
   componentWillMount() {
@@ -27,11 +17,11 @@ class SummonerList extends Component {
   }
 
   render() {
-    const {summoners, onClick} = this.props;
+    const {summoners, getSummoner} = this.props;
     if (summoners.length > 0) {
       return (
         <div className="summoners">
-          {summoners.map((summoner) => <SummonerCard key={summoner.name} summoner={summoner} onClick={onClick}/>)}
+          {summoners.map((summoner) => <SummonerCard key={summoner.name} summoner={summoner} onClick={getSummoner}/>)}
         </div>
       );
     } else {
@@ -40,4 +30,4 @@ class SummonerList extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SummonerList);
+export default connect(mapStateToProps, {getSummoners, getSummoner})(SummonerList);

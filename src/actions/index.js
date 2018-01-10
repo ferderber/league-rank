@@ -1,6 +1,5 @@
 import {
   SET_SUMMONERS,
-  SET_ACTIVE_SUMMONER,
   ADD_SUMMONERS,
   SUMMONER_REQUEST,
   SUMMONER_FAILURE,
@@ -10,6 +9,7 @@ import {
   SUMMONERS_SUCCESS,
   CALL_API
 } from './types';
+import {push} from 'react-router-redux/actions';
 
 export const setSummoners = summoners => {
   return {type: SET_SUMMONERS, summoners};
@@ -17,10 +17,6 @@ export const setSummoners = summoners => {
 
 export const addSummoners = summoners => {
   return {type: ADD_SUMMONERS, summoners};
-}
-
-export const setActiveSummoner = summoner => {
-  return {type: SET_ACTIVE_SUMMONER, summoner};
 }
 
 const fetchSummoner = name => ({
@@ -50,5 +46,6 @@ export const getSummoners = () => (dispatch, getState) => {
 
 export const getSummoner = (name) => (dispatch, getState) => {
   const formattedName = name.replace(' ', '');
+  dispatch(push(`/summoner/${formattedName}`));
   return dispatch(fetchSummoner(formattedName));
 }

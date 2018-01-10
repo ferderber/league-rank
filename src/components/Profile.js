@@ -8,9 +8,11 @@ import {getSummoner} from '../actions/index';
 
 class Profile extends Component {
   componentWillMount() {
-    this
-      .props
-      .getSummoner(this.props.match.params.name.toLowerCase());
+    if (this.props.activeSummoner === null && this.props.loading === false) {
+      this
+        .props
+        .getSummoner(this.props.match.params.name);
+    }
   }
   render() {
     const {activeSummoner} = this.props;
