@@ -30,7 +30,7 @@ let AddSummoner = ({dispatch, getSummoner}) => {
         ref={node => {
         summonerInput = node;
       }}/>
-      <Button text="Lookup Summoner"></Button>
+      <Button text="Search"></Button>
     </form>
   );
 };
