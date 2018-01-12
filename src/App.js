@@ -14,7 +14,7 @@ class App extends Component {
         <nav>
           <img
             className="logo"
-            src="lrhalf.png"
+            src="lr_logo.png"
             width="100px"
             onClick={this.props.navigateHome}/>
           <AddSummoner className="primary-input"/>
