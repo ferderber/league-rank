@@ -65,7 +65,7 @@ export const loadMoreSummoners = () => (dispatch, getState) => {
 }
 
 export const getSummoner = (name) => (dispatch, getState) => {
-  const formattedName = name.replace(' ', '');
+  const formattedName = name.replace(/ /g, '');
   dispatch(push(`/summoner/${formattedName}`));
   return dispatch(fetchSummoner(formattedName));
 }
