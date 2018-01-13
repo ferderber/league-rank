@@ -14,7 +14,7 @@ class App extends Component {
         <nav>
           <img
             className="logo"
-            src="lr_logo.png"
+            src="/lr_logo.png"
             width="100px"
             onClick={this.props.navigateHome}/>
           <AddSummoner className="primary-input"/>
@@ -24,7 +24,7 @@ class App extends Component {
               <BarLoader
                 width={200}
                 height={8}
-                color={'#36d7b7'}
+                color={'#ebb054'}
                 loading={this.props.loading}/>
             </div>
           : null}
