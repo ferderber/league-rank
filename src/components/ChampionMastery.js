@@ -34,7 +34,7 @@ function getBackgroundStyle(champion) {
   return {backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.key}_0.jpg')`};
 }
 function getChampionAvatar(champion) {
-  return `http://ddragon.leagueoflegends.com/cdn/7.24.2/img/champion/${champion.key}.png`;
+  return `http://ddragon.leagueoflegends.com/cdn/8.1.1/img/champion/${champion.key}.png`;
 }
 function getMasteryIcon(mastery) {
   return `/mastery${mastery.championLevel}.png`;

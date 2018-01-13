@@ -22,7 +22,7 @@ function getBackgroundStyle(championMasteries) {
   }
 }
 function getIconUrl(summoner) {
-  return "http://ddragon.leagueoflegends.com/cdn/7.24.2/img/profileicon/" + summoner.profileIconId + ".png";
+  return "http://ddragon.leagueoflegends.com/cdn/8.1.1/img/profileicon/" + summoner.profileIconId + ".png";
 }
 
 export default Summoner;
