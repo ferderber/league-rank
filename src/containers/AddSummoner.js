@@ -8,7 +8,7 @@ import './AddSummoner.css';
 
 function validate(value) {
   if (value) {
-    if(/^[0-9\\p{L} _\\.]+$/.test(value)) {
+    if(/^[0-9A-Za-z _\\.]+$/.test(value)) {
       return true;
     } else {
       toast('Invalid summoner name!');
