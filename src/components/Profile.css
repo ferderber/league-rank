@@ -1,8 +1,5 @@
 .profile {
-  display: flex;
-  flex-direction: column;
   margin: auto;
-  width: 70%;
   max-width: 1000px;
   overflow: hidden;
   border-radius: 2px;
@@ -22,17 +19,12 @@
   text-shadow: 1px 1px 5px #aaa;
   color: #000;
 }
-.masteries {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 .masteries > * {
   margin-bottom: 10px;
 }
 
 @media screen and (max-width: 750px) {
   .profile {
-    width: 95%;
+    border-radius: 0;
   }
 }

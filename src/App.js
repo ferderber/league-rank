@@ -11,7 +11,7 @@ import styles from './App.css';
 class App extends Component {
   render() {
     return (
-      <div className={styles.app}>
+      <div>
         <nav>
           <img
             className={styles.logo}
@@ -19,7 +19,7 @@ class App extends Component {
             width="100px"
             alt="primary logo"
             onClick={this.props.navigateHome}/>
-          <AddSummoner className={styles.primaryInput}/>
+          <AddSummoner/>
         </nav>
         <ToastContainer autoClose={5000}/> {this.props.loading
           ? <div className={styles.loadingBar}>

@@ -1,29 +1,17 @@
-.app {
-}
 .logo {
-  width: 100px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  width: 82px;
+  padding: 5px;
   cursor: pointer;
 }
 
 nav {
   display: flex;
-  padding-right: 10px;
+  max-height: 56px;
   margin-bottom: 20px;
   align-items: center;
-  background-color: #dfdfdf;
+  background-color: #006666;
   justify-content: space-between;
-}
-nav > .primaryInput {
-  justify-content: flex-end;
-}
-
-.appHeader {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  box-shadow: 0px 2px 4px rgba(0,0,0,.26);
 }
 
 .appTitle {
@@ -35,9 +23,9 @@ nav > .primaryInput {
   width: 200px;
 }
 
+
 @media screen and (max-width: 750px) {
-  .app {
-    width: 100%;
-    margin: auto;
+  nav {
+    margin-bottom: 0px;
   }
 }

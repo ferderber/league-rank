@@ -1,5 +1,4 @@
 .btn {
-  display: inline-block;
   height: 36px;
   min-width: 88px;
   white-space: nowrap;
@@ -15,10 +14,4 @@
 }
 .btn:active {
   opacity: 0.7;
-}
-.btnText {
-  display: block;
-  position: relative;
-  font-size: 1.5em;
-  text-align: center;
 }
