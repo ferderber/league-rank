@@ -4,9 +4,9 @@ import styles from './Input.css';
 
 class Input extends Component {
     render() {
-        const {name} = this.props;
+        const {name, theme} = this.props;
         return (<input
-            className={styles.input}
+            className={`${styles.input} ${styles[theme]}`}
             type="text"
             placeholder={name}
             onChange={this.props.onChange}
