@@ -55,7 +55,6 @@ const fetchMoreSummoners = (pageNum) => ({
 });
 
 export const getSummoners = () => (dispatch, getState) => {
-  console.log(getState());
   return dispatch(fetchSummoners(getState().app.pageNum));
 }
 

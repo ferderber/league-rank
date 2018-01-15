@@ -21,8 +21,6 @@ const summoners = (state = {
     case SUMMONERS_SUCCESS:
       return Object.assign({}, state, {summoners: action.response, loading: false, errorMessage: null});
     case ADD_SUMMONERS:
-    console.log(state.summoners);
-    console.log(action.response);
       return Object.assign({}, state, {
         summoners: [
           ...state
