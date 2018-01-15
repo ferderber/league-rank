@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Summoner from './Summoner';
 import ChampionMastery from './ChampionMastery';
 
-import './Profile.css';
+import styles from './Profile.css';
 import {getSummoner} from '../actions/index';
 
 class Profile extends Component {
@@ -19,13 +19,13 @@ class Profile extends Component {
     const summoner = activeSummoner;
     if (summoner) {
       return (
-        <div className="profile">
-          <div className="profile-header">
+        <div className={styles.profile}>
+          <div className={styles.profileHeader}>
             <Summoner summoner={summoner}/>
           </div>
-          <div className="profile-body">
+          <div className={styles.profileBody}>
             <h2>Masteries</h2>
-            <div className="masteries">
+            <div className={styles.masteries}>
               {summoner.championMasteries && summoner
                 .championMasteries
                 .map(m => <ChampionMastery

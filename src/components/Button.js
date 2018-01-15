@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './Button.css';
+import styles from './Button.css';
 
 let Button = ({text}) => {
   return (
-    <button className="btn" onClick={() => ""}>
-      <span className="btn-text">{text}</span>
+    <button className={styles.btn} onClick={() => ""}>
+      <span className={styles.btnText}>{text}</span>
     </button>
   );
 };

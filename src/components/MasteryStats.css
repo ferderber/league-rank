@@ -1,0 +1,11 @@
+.statDescription {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+}
+.statTable > * > tr > th {
+  text-align: left;
+}
+.statTable > * > tr > td {
+  text-align: center;
+}

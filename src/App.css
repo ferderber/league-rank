@@ -1,4 +1,4 @@
-.App {
+.app {
 }
 .logo {
   width: 100px;
@@ -15,28 +15,28 @@ nav {
   background-color: #dfdfdf;
   justify-content: space-between;
 }
-nav > .primary-input {
+nav > .primaryInput {
   justify-content: flex-end;
 }
 
-.App-header {
+.appHeader {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
+.appTitle {
   font-size: 1.5em;
 }
 
-.loading-bar {
+.loadingBar {
   margin: auto;
   width: 200px;
 }
 
 @media screen and (max-width: 750px) {
-  .App {
+  .app {
     width: 100%;
     margin: auto;
   }

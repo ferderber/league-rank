@@ -1,11 +1,12 @@
-.add-summoner {
+.addSummoner {
   display: flex;
   min-width: 200px;
   flex-direction: row;
   justify-content: safe center;
   align-items: center;
 }
-.summoner-input {
+
+.summonerInput {
   width: 150px;
   height: 1.5em;
   font-size: 1em;
@@ -13,11 +14,12 @@
   border: none;
   border-radius: 2px;
 }
+
 @media screen and (max-width: 750px) {
-  .add-summoner{
+  .addSummoner {
     min-width: 100px;
   }
-  .summoner-input {
+  .summonerInput {
     height: 1.3em;
   }
 }

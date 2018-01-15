@@ -1,15 +1,15 @@
 import React from 'react';
 import MasteryStats from './MasteryStats';
 
-import './ChampionMastery.css';
+import styles from './ChampionMastery.css';
 
 const ChampionMastery = ({championMastery}) => (
-  <div className="champion-mastery">
-    <div className="champion-head">
-      <div className="head-content">
+  <div className={styles.championMastery}>
+    <div className={styles.championHead}>
+      <div className={styles.headContent}>
         <span>
           <img
-            className="champion-avatar"
+            className={styles.championAvatar}
             src={getChampionAvatar(championMastery.champion)}
             alt=""
             width="100px"/>
@@ -17,15 +17,15 @@ const ChampionMastery = ({championMastery}) => (
         <h4>{championMastery.champion.name}</h4>
       </div>
       <img
-        className="mastery-image"
+        className={styles.masteryImage}
         src={getMasteryIcon(championMastery.mastery)}
         alt=""
         width="50px"/>
       <span
-        className="champion-image"
+        className={styles.championImage}
         style={getBackgroundStyle(championMastery.champion)}></span>
     </div>
-    <div className="champion-details">
+    <div className={styles.championDetails}>
       <MasteryStats stats={championMastery.statistics}/>
     </div>
   </div>

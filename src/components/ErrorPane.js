@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './ErrorPane.css';
+import styles from './ErrorPane.css';
 
 const ErrorPane = ({message}) => {
     return (
-        <div className="error-pane">
+        <div className={styles.errorPane}>
             <h2>Error!</h2>
-            <div className="message">{message}</div>
-            <div className="description"></div>
+            <div className={styles.message}>{message}</div>
+            <div className={styles.description}></div>
         </div>
     );
 };

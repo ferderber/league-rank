@@ -1,10 +1,10 @@
-.champion-mastery {
+.championMastery {
   border-radius: 3px 3px 0 0;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   overflow: hidden;
 }
 
-.champion-head {
+.championHead {
   /* width: 100%; */
   position: relative;
   padding: 0;
@@ -15,7 +15,7 @@
   overflow: hidden;
 }
 
-.head-content {
+.headContent {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -27,35 +27,24 @@
   min-width: 200px;
   z-index: 2;
 }
-.champion-details {
+.championDetails {
   padding: 20px;
   background-color: #fff;
 }
-.stat-description {
-  font-weight: bold;
-  font-size: 1.2em;
-  padding-bottom: 10px;
-}
-.stat-table > * > tr > th {
-  text-align: left;
-}
-.stat-table > * > tr > td {
-  text-align: center;
-}
-.head-content > * {
+.headContent > * {
   flex: 1;
 }
-.champion-avatar {
+.championAvatar {
   display: block;
 }
 
-.mastery-image {
+.masteryImage {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.champion-image {
+.championImage {
   z-index: 1;
   position: absolute;
   width: 100%;

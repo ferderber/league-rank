@@ -1,12 +1,14 @@
 import React from 'react';
 
+import styles from './MasteryStats.css';
+
 const MasteryStats = ({stats}) => {
   const getAvg = (total) => (total / stats.numGames).toFixed(2);
   if (stats && stats.numGames > 0) 
     return (
       <div>
-      <div className="stat-description">Average champion performance over {stats.numGames} recorded games</div>
-      <table className="stat-table">
+      <div className={styles.statDescription}>Average champion performance over {stats.numGames} recorded games</div>
+      <table className={styles.statTable}>
         <thead>
           <tr>
             <th>Type</th>

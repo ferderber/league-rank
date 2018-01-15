@@ -2,26 +2,27 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {ToastContainer} from 'react-toastify';
 import {push} from 'react-router-redux';
-import './App.css';
 import AddSummoner from './containers/AddSummoner';
 import {BarLoader} from 'react-spinners';
 import ErrorPane from './components/ErrorPane';
 
+import styles from './App.css';
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className={styles.app}>
         <nav>
           <img
-            className="logo"
+            className={styles.logo}
             src="/lr_logo.png"
             width="100px"
             alt="primary logo"
             onClick={this.props.navigateHome}/>
-          <AddSummoner className="primary-input"/>
+          <AddSummoner className={styles.primaryInput}/>
         </nav>
         <ToastContainer autoClose={5000}/> {this.props.loading
-          ? <div className="loading-bar">
+          ? <div className={styles.loadingBar}>
               <BarLoader
                 width={200}
                 height={8}

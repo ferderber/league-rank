@@ -1,13 +1,13 @@
 import React from 'react';
 import Summoner from './Summoner';
 
-import './SummonerCard.css';
+import styles from './SummonerCard.css';
 
 class SummonerCard extends React.Component {
   render() {
     return (
-      <div className="summoner-card" onClick={() => this.props.onClick(this.props.summoner.name)}>
-        <img className="mastery-image" alt="" src={this.getMasteryIcon()}/>
+      <div className={styles.summonerCard} onClick={() => this.props.onClick(this.props.summoner.name)}>
+        <img className={styles.masteryImage} alt="" src={this.getMasteryIcon()}/>
         <Summoner summoner={this.props.summoner}/> 
       </div>
     );

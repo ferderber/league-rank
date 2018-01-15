@@ -1,4 +1,4 @@
-.summoner-card {
+.summonerCard {
   width: 60%;
   max-width: 1000px;
   display: flex;
@@ -8,14 +8,11 @@
   overflow: hidden;
   border-radius: 2px;
   position: relative;
+  cursor: pointer;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.summoner-card>.summoner {
-  cursor: pointer;
-}
-
-.mastery-image {
+.masteryImage {
   position: absolute;
   z-index: 4;
   pointer-events: none;
@@ -35,7 +32,7 @@
 }
 
 @media screen and (max-width: 750px) {
-  .summoner-card {
+  .summonerCard {
     width: 90%;
   }
 }

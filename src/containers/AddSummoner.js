@@ -4,7 +4,7 @@ import {getSummoner} from '../actions';
 import Button from '../components/Button';
 import {toast} from 'react-toastify';
 
-import './AddSummoner.css';
+import styles from './AddSummoner.css';
 
 function validate(value) {
   if (value) {
@@ -22,7 +22,7 @@ let AddSummoner = ({dispatch, getSummoner}) => {
 
   return (
     <form
-      className="add-summoner"
+      className={styles.addSummoner}
       onSubmit={e => {
       e.preventDefault();
       if (validate(summonerInput.value)) {
@@ -31,7 +31,7 @@ let AddSummoner = ({dispatch, getSummoner}) => {
       summonerInput.value = '';
     }}>
       <input
-        className="summoner-input"
+        className={styles.summonerInput}
         ref={node => {
         summonerInput = node;
       }}/>

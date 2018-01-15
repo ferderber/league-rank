@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './Link.css';
+import styles from './Link.css';
 
 let Link = ({text, onClick}) => {
     return (
-        <div className="link-container" onClick={onClick}>
+        <div className={styles.linkContainer} onClick={onClick}>
             {text}
         </div>
     );

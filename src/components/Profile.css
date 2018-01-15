@@ -10,16 +10,16 @@
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-.profile-header {
+.profileHeader {
   position: relative;
 }
-.profile-body {
+.profileBody {
   padding: 10px;
   min-height: 400px;
   background-color: #dcdcdc;
 }
 
-.profile-body > h2 {
+.profileBody > h2 {
   font-style: italic;
   text-shadow: 1px 1px 5px #aaa;
   color: #000;

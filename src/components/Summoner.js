@@ -1,17 +1,17 @@
 import React from 'react';
 
-import './Summoner.css';
+import styles from './Summoner.css';
 
 const Summoner = ({summoner, onClick}) => (
-  <div className="summoner" onClick={onClick}>
-    <div className="summoner-content">
-      <div className="summoner-main">
-        <span className="summoner-level">{summoner.level}</span>
-        <img src={getIconUrl(summoner)} alt="Summoner icon" className="profileImage"/>
+  <div className={styles.summoner} onClick={onClick}>
+    <div className={styles.summonerContent}>
+      <div className={styles.summonerMain}>
+        <span className={styles.summonerLevel}>{summoner.level}</span>
+        <img src={getIconUrl(summoner)} alt="Summoner icon" className={styles.profileImage}/>
         <span>{summoner.name}</span>
       </div>
       <span
-        className="summoner-image"
+        className={styles.summonerImage}
         style={getBackgroundStyle(summoner.championMasteries)}></span>
     </div>
   </div>
