@@ -4,7 +4,6 @@ import {getSummoner} from '../actions';
 import Button from '../components/Button';
 import {toast} from 'react-toastify';
 
-import styles from './AddSummoner.css';
 import Input from '../components/Input';
 
 class AddSummoner extends Component {
@@ -48,8 +47,8 @@ class AddSummoner extends Component {
 
   render() {
     return (
-      <form className={styles.addSummoner} onSubmit={this.handleSubmit}>
-        <Input name="Summoner Name" onChange={this.handleSummonerNameChange}/>
+      <form onSubmit={this.handleSubmit}>
+        <Input name="Summoner Name" theme="dark" onChange={this.handleSummonerNameChange}/>
         <Button text="Search"/>
       </form>
     );
