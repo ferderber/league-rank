@@ -19,11 +19,11 @@ const Summoner = ({summoner, onClick}) => (
 );
 function getBackgroundStyle(championMasteries) {
   if (championMasteries.length > 0) {
-    return {backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championMasteries[0].champion.key}_0.jpg')`};
+    return {backgroundImage: `url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championMasteries[0].champion.key}_0.jpg')`};
   }
 }
 function getIconUrl(summoner) {
-  return "http://ddragon.leagueoflegends.com/cdn/8.1.1/img/profileicon/" + summoner.profileIconId + ".png";
+  return "https://ddragon.leagueoflegends.com/cdn/8.1.1/img/profileicon/" + summoner.profileIconId + ".png";
 }
 
 export default Summoner;
