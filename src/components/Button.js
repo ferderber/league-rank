@@ -5,7 +5,7 @@ import styles from './Button.css';
 let Button = ({text}) => {
   return (
     <button className={styles.btn} onClick={() => ""}>
-      <span className={styles.btnText}>{text}</span>
+      {text}
     </button>
   );
 };
