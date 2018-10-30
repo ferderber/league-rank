@@ -30,9 +30,6 @@ const fetchSummoner = name => ({
       SUMMONER_REQUEST, SUMMONER_SUCCESS, SUMMONER_FAILURE
     ],
     endpoint: `/summoners/${name}`,
-    options: {
-      method: 'POST'
-    }
   }
 });
 
@@ -41,7 +38,7 @@ const fetchSummoners = (pageNum) => ({
     types: [
       SUMMONERS_REQUEST, SUMMONERS_SUCCESS, SUMMONERS_FAILURE
     ],
-    endpoint: `/summoners/${pageNum}`
+    endpoint: `/summoners?page=${pageNum}`
   }
 });
 
@@ -50,7 +47,7 @@ const fetchMoreSummoners = (pageNum) => ({
     types: [
       SUMMONERS_REQUEST, ADD_SUMMONERS, SUMMONERS_FAILURE
     ],
-    endpoint: `/summoners/${pageNum}`
+    endpoint: `/summoners?page=${pageNum}`
   }
 });
 

@@ -1,6 +1,7 @@
 # League Rank
 
 [Demo version](https://lr.cobaltium.net)
+[API Repository](https://github.com/matthewferderber/league-rank-api)
 
 League Rank is a React.js web application that uses the League of Legends API to gather data about users.
 
