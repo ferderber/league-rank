@@ -7,6 +7,7 @@ import {createStore, applyMiddleware, combineReducers} from 'redux';
 import createHistory from 'history/createBrowserHistory';
 import {Route} from 'react-router';
 import {routerReducer, routerMiddleware, ConnectedRouter} from 'react-router-redux';
+import ReactGA from 'react-ga';
 
 import api from './middleware/api';
 
@@ -22,6 +23,9 @@ const history = createHistory();
 const middleware = routerMiddleware(history);
 
 const store = createStore(combineReducers({app: leagueRank, router: routerReducer}), applyMiddleware(middleware, reduxThunk, api, logger));
+
+ReactGA.initialize('UA-91095346-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
   <Provider store={store}>
